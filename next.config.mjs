@@ -2,15 +2,11 @@
 const nextConfig = {
 	reactStrictMode: true,
 	images: {
-		// TODO: 추후 우리팀 api url
 		remotePatterns: [
 			{
-				protocol: "http",
-				hostname: "**",
-			},
-			{
 				protocol: "https",
-				hostname: "**",
+				hostname: "sprint-fe-project.s3.ap-northeast-2.amazonaws.com",
+				pathname: "/Mogazoa/**",
 			},
 		],
 	},
