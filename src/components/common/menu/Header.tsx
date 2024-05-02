@@ -108,6 +108,7 @@ export default function Header({
 							className="absolute inset-0 object-cover"
 							width={500}
 							height={500}
+							priority
 						/>
 					</Link>
 				)}

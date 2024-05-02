@@ -39,6 +39,7 @@ export default function ProfileImage({ src, size }: Props) {
 					alt="사용자 프로필 이미지"
 					fill
 					onError={() => setIsError(true)}
+					priority
 				/>
 			)}
 		</div>
