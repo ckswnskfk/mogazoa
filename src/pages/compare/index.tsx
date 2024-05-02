@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useEffect } from "react";
 
 import Header from "@/components/common/menu/Header";
@@ -19,20 +20,32 @@ export default function Index() {
 	}, [openSigninModal]);
 
 	return (
-		<div className="h-full min-h-screen bg-[#1c1c22]">
-			<Header />
-			<div className="_flex-col-center mx-8 gap-24 pb-16 pt-12 md:mx-12 md:max-w-[94rem] md:pb-40 md:pt-16 lg:mx-auto lg:max-w-[96rem] lg:gap-32 lg:pt-24">
-				<CompareForm openSigninModal={openSigninModal} />
-				<div>
-					{firstProduct && secondProduct ? (
-						<Result firstProduct={firstProduct} secondProduct={secondProduct} />
-					) : (
-						<div className="mt-28 md:mt-72">
-							<Loading />
-						</div>
-					)}
+		<>
+			<Head>
+				<title>상품 비교 - Mogazoa</title>
+				<meta
+					name="description"
+					content="사용자가 원하는 상품 두 개를 비교해 볼 수 있습니다!"
+				></meta>
+			</Head>
+			<div className="h-full min-h-screen bg-[#1c1c22]">
+				<Header />
+				<div className="_flex-col-center mx-8 gap-24 pb-16 pt-12 md:mx-12 md:max-w-[94rem] md:pb-40 md:pt-16 lg:mx-auto lg:max-w-[96rem] lg:gap-32 lg:pt-24">
+					<CompareForm openSigninModal={openSigninModal} />
+					<div>
+						{firstProduct && secondProduct ? (
+							<Result
+								firstProduct={firstProduct}
+								secondProduct={secondProduct}
+							/>
+						) : (
+							<div className="mt-28 md:mt-72">
+								<Loading />
+							</div>
+						)}
+					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 }

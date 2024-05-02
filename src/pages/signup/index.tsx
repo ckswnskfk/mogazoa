@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React from "react";
 
 import AuthContainer from "@/components/auth/AuthContainer";
@@ -6,8 +7,14 @@ import withLogin from "@/components/auth/withLogin";
 
 export default withLogin(function index() {
 	return (
-		<AuthContainer>
-			<SignupForm />
-		</AuthContainer>
+		<>
+			<Head>
+				<title>회원가입 - Mogazoa</title>
+				<meta name="description" content="회원가입 페이지"></meta>
+			</Head>
+			<AuthContainer>
+				<SignupForm />
+			</AuthContainer>
+		</>
 	);
 });

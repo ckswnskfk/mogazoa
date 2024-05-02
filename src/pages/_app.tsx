@@ -7,6 +7,7 @@ import {
 } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import type { AppProps } from "next/app";
+import Head from "next/head";
 import { ReactNode, useState } from "react";
 
 import ModalWrapper from "@/components/common/modal/ModalWrapper";
@@ -48,6 +49,10 @@ function Providers({
 export default function App({ Component, pageProps }: AppProps) {
 	return (
 		<>
+			<Head>
+				<title>Mogazoa</title>
+				<meta name="description" content="상품 비교 플랫폼 모가조아!"></meta>
+			</Head>
 			<Providers pageProps={pageProps}>
 				<Component {...pageProps} />
 			</Providers>

@@ -1,6 +1,7 @@
 import { dehydrate, QueryClient, useQuery } from "@tanstack/react-query";
 import { isAxiosError } from "axios";
 import { GetServerSidePropsContext } from "next";
+import Head from "next/head";
 import { useEffect } from "react";
 
 import { getMe } from "@/apis/user";
@@ -58,5 +59,13 @@ export default function MyPage() {
 		return <Loading />;
 	}
 
-	return <ProfilePageLayout user={me} />;
+	return (
+		<>
+			<Head>
+				<title>마이 페이지 - Mogazoa</title>
+				<meta name="description" content="내 정보 페이지"></meta>
+			</Head>
+			<ProfilePageLayout user={me} />;
+		</>
+	);
 }
