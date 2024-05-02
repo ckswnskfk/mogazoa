@@ -63,7 +63,7 @@ function ModalWrapper({ children, id, onRemove, config }: Props) {
 		return () => {
 			document.removeEventListener("keydown", handleModalTrapFocus);
 		};
-	}, [modalLayoutTabIndex]);
+	}, [modalLayoutTabIndex, modalRoot]);
 
 	return modalRoot
 		? createPortal(

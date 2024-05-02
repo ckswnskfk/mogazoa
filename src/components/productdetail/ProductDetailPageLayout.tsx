@@ -41,7 +41,7 @@ export default function ProductDetailPageLayout() {
 		if ((router.isReady && isNaN(productId)) || isError) {
 			router.push("/");
 		}
-	}, [productId, router.isReady, isError]);
+	}, [productId, router.isReady, isError, router]);
 
 	return (
 		<main className="_flex-col-center gap-[6rem] bg-[#1C1C22] px-[2rem] py-[3rem] md:px-[3rem] md:py-[4rem] lg:py-[6rem]">

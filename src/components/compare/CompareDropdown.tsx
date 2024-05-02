@@ -30,38 +30,40 @@ export default function CompareDropdown({
 
 	const throttledHandleLoadMoreData = useThrottle(handleScroll, 200);
 
-	const throttledHandleLoadMoreDataWithTab = (e: KeyboardEvent) => {
-		if (e.key === "Tab") {
-			throttledHandleLoadMoreData();
-		}
-	};
-
 	useEffect(() => {
+		const currentScrollRef = scrollRef.current;
+
+		const throttledHandleLoadMoreDataWithTab = (e: KeyboardEvent) => {
+			if (e.key === "Tab") {
+				throttledHandleLoadMoreData();
+			}
+		};
+
 		setTimeout(() =>
 			focusRef.current?.scrollIntoView({ block: "center", behavior: "smooth" }),
 		);
 
-		if (scrollRef.current) {
-			scrollRef.current.addEventListener("scroll", throttledHandleLoadMoreData);
-			scrollRef.current.addEventListener(
+		if (currentScrollRef) {
+			currentScrollRef.addEventListener("scroll", throttledHandleLoadMoreData);
+			currentScrollRef.addEventListener(
 				"keydown",
 				throttledHandleLoadMoreDataWithTab,
 			);
 		}
 
 		return () => {
-			if (scrollRef.current) {
-				scrollRef.current.removeEventListener(
+			if (currentScrollRef) {
+				currentScrollRef.removeEventListener(
 					"scroll",
 					throttledHandleLoadMoreData,
 				);
-				scrollRef.current.removeEventListener(
+				currentScrollRef.removeEventListener(
 					"keydown",
 					throttledHandleLoadMoreDataWithTab,
 				);
 			}
 		};
-	}, [focusIndex, nextCursor]);
+	}, [focusIndex, nextCursor, throttledHandleLoadMoreData]);
 
 	return (
 		<div ref={dropdownRef}>

@@ -60,7 +60,7 @@ export default function HomeLayout() {
 		console.log("fetchProducts Effect" + " " + products?.nextCursor);
 
 		fetchProducts();
-	}, [params]);
+	}, [params, products?.nextCursor]);
 
 	// 카테고리를 선택했을 때 (order는 최신순으로 초기화)
 	const handleSelectCategory = (

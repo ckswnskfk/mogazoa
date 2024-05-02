@@ -111,7 +111,7 @@ export default function ReviewModal({
 				getImage(i);
 			}
 		}
-	}, [editorData.length, trigger]);
+	}, [editImageId, editorData, editorData.length, getImage, image, trigger]);
 
 	useEffect(() => {
 		if (type === "modify") {
@@ -127,7 +127,7 @@ export default function ReviewModal({
 				setRating(reviewData?.rating);
 			}
 		}
-	}, [type]);
+	}, [reviewData, type]);
 
 	const handleOnClick = () => {
 		rating ? setRateErrMsg("") : setRateErrMsg("별점으로 상품을 평가해주세요.");
