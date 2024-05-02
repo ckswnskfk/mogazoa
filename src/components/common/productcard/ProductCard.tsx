@@ -32,6 +32,7 @@ const ProductCard = forwardRef<HTMLDivElement, Props>(function ProductCard(
 					alt={productName}
 					className="object-contain"
 					fill
+					sizes="(min-width: 1024px) 278px, (min-width: 768px) 225px, 138px"
 				/>
 			</div>
 			<div className="flex flex-col md:gap-[1rem] md:px-[0.65rem] lg:px-[1rem]">
