@@ -14,6 +14,12 @@ const profileImageVariants = cva("relative overflow-hidden rounded-full", {
 	},
 });
 
+const profileImageSizes = {
+	small: "(min-width: 1024px) 42px, 36px",
+	medium: "(min-width: 1024px) 52px, 48px",
+	large: "(min-width: 1024px) 180px, 120px",
+};
+
 type Props = React.HTMLAttributes<HTMLDivElement> &
 	VariantProps<typeof profileImageVariants> & {
 		size: "small" | "medium" | "large";
@@ -40,6 +46,7 @@ export default function ProfileImage({ src, size }: Props) {
 					fill
 					onError={() => setIsError(true)}
 					priority
+					sizes={profileImageSizes[size]}
 				/>
 			)}
 		</div>
