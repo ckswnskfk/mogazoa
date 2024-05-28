@@ -48,4 +48,4 @@ npm start run
 
 ## 🔗 배포링크
 
-[🔗Link](https://project-cf3j.vercel.app/)
+[🔗Link](https://mogazoa-nine.vercel.app/)
