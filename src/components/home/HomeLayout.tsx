@@ -54,10 +54,7 @@ export default function HomeLayout() {
 		const fetchProducts = async () => {
 			const data = await getProducts(params);
 			setProducts(data);
-			console.log("fetchProducts" + " " + data.nextCursor);
 		};
-
-		console.log("fetchProducts Effect" + " " + products?.nextCursor);
 
 		fetchProducts();
 	}, [params, products?.nextCursor]);
@@ -71,7 +68,7 @@ export default function HomeLayout() {
 			...prev,
 			category: categoryId || undefined,
 			order: "recent",
-			cursor: products?.nextCursor,
+			cursor: undefined,
 		}));
 		setSelectedCategoryId(categoryId);
 		setSelectedCategoryName(categoryName);
@@ -83,7 +80,7 @@ export default function HomeLayout() {
 		setParams((prev) => ({
 			...prev,
 			order: order,
-			cursor: products?.nextCursor,
+			cursor: undefined,
 		}));
 	};
 

@@ -20,8 +20,6 @@ export default function getDataByScroll(
 
 	const { scrollTop, scrollHeight, clientHeight } = ref.current ?? {};
 
-	console.log(scrollHeight);
-
 	if (!scrollTop || !scrollHeight || !clientHeight) return;
 
 	if (Math.abs(scrollHeight - clientHeight - scrollTop) <= threshold) {

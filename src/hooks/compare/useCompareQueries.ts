@@ -30,8 +30,6 @@ export default function useCompareQueries() {
 	const secondProduct = data?.[1];
 
 	const refetchAll = useCallback(() => {
-		console.log(refetchFnArray);
-
 		refetchFnArray.forEach((refetch) => refetch());
 	}, [refetchFnArray]);
 
