@@ -1,29 +1,33 @@
 <p align="center"><img width="624" src="https://github.com/4-2-mogazoa/mogazoa/assets/124851297/77792d25-f528-4987-8ef7-bb996eef95fc"></p>
 
-<p align="center">$\huge{이거 ?\ 혹은\ 저거 ?,\ MogaZoa?}$</p>
+<p align="center">$\huge{이거 ?\ 혹은\ 저거 ?\ MogaZoa?}$</p>
 <p align="center" color="#ccc">늘 새로운 선택에 고민하던 당신🫠<br/>뭐가 더 좋을지 비교해보는게 어떨까요?</p>
 
 ## 📘목차
 
-1. [프로젝트 소개](#🧑‍💻-프로젝트 소개)
-2. [사용기술](#사용기술)
-3. [팀&역할](#팀--역할)
-4. [프로젝트 설치&실행](#프로젝트-설치--실행)
+1. [프로젝트 소개](#-프로젝트-소개)
+2. [사용기술](#-사용기술)
+3. [팀&역할](#-팀--역할)
+4. [프로젝트 설치&실행](#-프로젝트-설치--실행)
 
-##🧑‍💻 프로젝트 소개
+## 🧑‍💻 프로젝트 소개
 
 > Project-Title : MogaZoa  
 > Project-Period : 2024-02-29 ~ 2024-04-04  
 > Team : Codeit-Sprint-2-Part4-Team2(김우현,김동빈,이찬주,정성원,황채연)
 
-##🔎 사용기술
+## 🔎 사용기술
 
-<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white"><img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white">  
+<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white"><img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white">
+<img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
+<img src="https://img.shields.io/badge/-React%20Query-FF4154?style=for-the-badge&logo=react%20query&logoColor=white"/>
+![React](https://img.shields.io/badge/zustand-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+<img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"/>
+<img src="https://img.shields.io/badge/-Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white"/>
 
+## 👥 팀 & 역할
 
-##👥 팀 & 역할
-
-| [김우현](https://github.com/rladngus133)                                                                                                     | [김동빈](https://github.com)                                                                                                      | [이찬주](https://github.com)                                                                                                  | [정성원](https://github.com)                                                                                                | [황채연](https://github.com)                                                                                                      |
+| [김우현](https://github.com/rladngus133)                                                                                                     | [김동빈](https://github.com/d0ngbb00)                                                                                                      | [이찬주](https://github.com)                                                                                                  | [정성원](https://github.com/jeongseongwon94)                                                                                                | [황채연](https://github.com/Chyyni)                                                                                                      |
 | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 
 
@@ -49,7 +53,7 @@
     - zustand를 사용하여 비교 상품 저장 기능 구현
     - 모달, 드롭다운 내 tab, 방향키 사용 기능 구현
 
-##🧑‍💻 프로젝트 설치 & 실행
+## 🧑‍💻 프로젝트 설치 & 실행
 
 ```
 git clone https://github.com/ckswnskfk/mogazoa.git .
@@ -57,6 +61,6 @@ npm i
 npm run dev
 ```
 
-##🔗 배포링크
+## 🔗 배포링크
 
 [🔗Link](https://mogazoa-nine.vercel.app/)
