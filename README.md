@@ -64,3 +64,7 @@ npm run dev
 ## 🔗 배포링크
 
 [🔗Link](https://mogazoa-nine.vercel.app/)
+
+## ❓ 테스트 계정
+ID: test1@codeit.com  
+PW: xptmxmrPwjd1
